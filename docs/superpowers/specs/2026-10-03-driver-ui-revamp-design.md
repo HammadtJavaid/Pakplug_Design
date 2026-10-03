@@ -102,6 +102,8 @@ The map screen has **no mesh**; the map is the background.
 ### 3.5 Icons, spacing, shape
 
 - **Icons:** SF Symbols on iOS. Material Symbols Rounded on Android (Apple's licence forbids SF Symbols on Android). Each component's notes include an SF → Material mapping row.
+  - In Figma the `Icon / …` components are the **real SF Symbols** at Medium weight, exported as vectors with [`tools/sf-symbols`](../tools/sf-symbols/README.md). They are not redraws. Each icon's description carries its SF name and its Material equivalent.
+  - The three EV plug symbols (`ev.plug.ac.type.2`, `ev.plug.dc.ccs2`, `ev.plug.dc.gb.t`) mark connector types. Android needs custom SVGs for them.
 - **Spacing:** 4pt grid. Screen side margin 16pt (iOS 27 default for inset content).
 - **Corners:** concentric: inner radius = outer radius − padding. Radius tokens follow the kit (sheets and large cards follow the device corner).
 - **Touch targets** ≥ 44×44pt.

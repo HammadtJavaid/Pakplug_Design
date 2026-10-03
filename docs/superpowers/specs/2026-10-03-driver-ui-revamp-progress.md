@@ -82,7 +82,13 @@ These are code-side and copy-only; none of them changes behaviour.
    - The booking details pill uses the raw status, so it can read "Upcoming" when the list says "Expired".
    - Paused bookings fall into no tab.
    - The empty-inbox "Find a charger" button is a no-op.
-4. **Presentation proposals** (same data, same actions):
+4. **Icons in code.**
+   - Native iOS chrome (tab bar, nav bar, alerts) gets SF Symbols for free.
+   - Icons drawn inside Flutter content need a small bridge on iOS that renders `UIImage(systemName:)`, through a platform view, a texture or a package.
+   - Android uses Material Symbols Rounded. The mapping is in each icon component's description.
+   - The three EV plug icons have no Material equivalent and need custom SVGs.
+   - Don't put the exported SF vectors in the shared Flutter assets: Apple's licence limits them to Apple platforms.
+5. **Presentation proposals** (same data, same actions):
    - price on map pins
    - optional pin clustering
    - glass status pill instead of the spinner chip / location snackbar
@@ -90,6 +96,32 @@ These are code-side and copy-only; none of them changes behaviour.
    - quick filter chips on the map that mirror the Filter & sort sheet
    - slide-to-start inside the Start-session sheet
 
+
+## Icons → real SF Symbols (Hammad: "the icons suck", 2026-10-03)
+
+The first icon set was 31 hand-drawn SF look-alikes, and they looked like it. They are now **Apple's actual SF Symbols**, so no new library was needed.
+
+- **Source:** exported from macOS 26 as vectors with [`tools/sf-symbols`](../tools/sf-symbols/README.md).
+- **Format:** Medium weight, 24pt frame, one optical size.
+- **Coverage:** 63 icons in the [Icons section](https://www.figma.com/design/x2fPubLkytfeO9btWSoTu6/PakPlug-Design-System?node-id=958-2), grouped and labelled.
+  - The 33 existing icons were swapped **in place**: same components and same vector layer. Every instance in every component, the style frame and the explorations kept its colour.
+  - Old stroke colours were moved to fills: 55 instances.
+  - 30 symbols are new, including Apple's EV set: `ev.charger`, `ev.plug.ac.type.2`, `ev.plug.dc.ccs2`, `ev.plug.dc.gb.t`, `bolt.car`. Also `wallet.pass` for the Charging Pass, Apple Maps' directions sign, share, info, warning, trash, gear and others.
+- **Connector Row** has a new **Plug** swap (Type 2 / CCS2 / GB/T), so each connector shows its real plug shape. Drivers with Chinese EVs need to see GB/T vs CCS2 at a glance.
+- **Quick Action Tile:** a usage row shows Book now (calendar) and Directions (Maps directions sign).
+- **Naming:** names now match SF exactly (`search` → `magnifyingglass`, `filter` → `line.3.horizontal.decrease`, `qrcode` → `qrcode.viewfinder`, `keypad` → `circle.grid.3x3`, `plug` → `ev.plug.ac.type.2`).
+  - SF Symbols has no `calendar.fill`, so the selected Bookings tab uses `calendar` ("Icon / calendar (selected)").
+- **Not changed:** 8 small hand-drawn bits remain inside old exploration mock-ups. The A + B flows are rebuilt from components, so they don't carry over.
+
+## C9 · Sheets + dialogs: done
+
+[C9 section](https://www.figma.com/design/x2fPubLkytfeO9btWSoTu6/PakPlug-Design-System?node-id=1008-398):
+
+- **Sheet parts:** Sheet Header, Quick Action Tile, Stats Row, Connector Row, Floating Action Pill.
+- **Sheets:** Filter & sort, Directions, Confirm booking, **Choose vehicle**.
+  - In Choose vehicle, incompatible vehicles stay readable, with the reason "Doesn't fit this charger (Type 2 (AC))".
+- **Native-style Alert:** Destructive "Cancel booking?" and Default "Cannot start session".
+- **C12 (Charging Pass parts):** Charging Pass (stacked/front × upcoming/completed/cancelled), Date Pill, Time Window, Availability Bar, Cost Footer.
 
 ## Divergent explorations (Hammad's request, 2026-10-03)
 
@@ -115,9 +147,7 @@ Two invented numbers were removed from C2 ("km per minute", "plugged in at 41%")
 
 ## Next
 
-- C6 grouped rows
-- C8 hero stat + charging gauge
-- C9 sheets + dialogs
-- C10 inputs
-- C11 empty / loading / error
-- then flows, in this order: Discover → Station → Book → Charge → Live session → Complete → Bookings → Messages → Profile → Onboarding
+- C10 inputs (default / focused / filled / error / disabled)
+- C11 empty / loading / error states
+- Then the chosen flows (A · Maps-native discovery + B · Charging Pass bookings), one at a time, each checked against every state in the logic map: Discover → Station → Book → Bookings (passes) → Pass detail
+- Later: Charge → Live session → Complete (C's live surfaces, D's celebration) → Messages → Profile → Onboarding
