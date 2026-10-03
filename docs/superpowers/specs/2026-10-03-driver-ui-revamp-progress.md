@@ -113,6 +113,21 @@ The first icon set was 31 hand-drawn SF look-alikes, and they looked like it. Th
   - SF Symbols has no `calendar.fill`, so the selected Bookings tab uses `calendar` ("Icon / calendar (selected)").
 - **Not changed:** 8 small hand-drawn bits remain inside old exploration mock-ups. The A + B flows are rebuilt from components, so they don't carry over.
 
+## Mesh retune + type options (Hammad's feedback, 2026-10-03)
+
+- **Mesh:** Hammad wanted deep emerald, one continuous flow, a calm lower half, and an accent in either yellow or teal-blue.
+  - We compared 9 candidates over three rounds. Yellow turns olive wherever it fades into deep green, so teal-blue is the accent.
+  - [Backgrounds](https://www.figma.com/design/x2fPubLkytfeO9btWSoTu6/PakPlug-Design-System?node-id=951-7415):
+    - Hero: deep emerald diagonal, mint glow top-left, quiet teal-blue bottom-right
+    - Quiet: light, one emerald family
+    - Celebrate: emerald with an energy-green glow
+  - The colours are raw until Hammad approves; then they become brand tokens.
+  - On the deep areas, use Frost Strong or Surface for cards with small grey text.
+- **Fonts:** Hammad dislikes the current heavy fonts.
+  - The [Type options board](https://www.figma.com/design/x2fPubLkytfeO9btWSoTu6/PakPlug-Design-System?node-id=1044-2) shows Now against A (SF Pro, lighter), B (Manrope), C (Plus Jakarta Sans, recommended) and D (Instrument Serif + Sans).
+  - Every option uses Light numbers, Medium titles and Regular body text. **Waiting for his pick.**
+- **Handoff for the next session:** [`2026-10-03-driver-ui-revamp-handoff.md`](2026-10-03-driver-ui-revamp-handoff.md).
+
 ## C9 · Sheets + dialogs: done
 
 [C9 section](https://www.figma.com/design/x2fPubLkytfeO9btWSoTu6/PakPlug-Design-System?node-id=1008-398):
