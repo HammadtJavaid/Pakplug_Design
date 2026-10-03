@@ -25,8 +25,8 @@ The theme is **light, not black**.
 
 | # | Decision | Chosen |
 |---|----------|--------|
-| D1 | Brand scope | **Full rebrand.** New mark, palette, type and components; nothing visual is inherited. |
-| D2 | Name | **PakPlug stays.** New glyph mark, wordmark and app icon. |
+| D1 | Brand scope | **Revised 2026-10-03 (Hammad): keep the heritage brand, refresh everything else.** The signature PakPlug **P** (bolt-stem P) is kept and refined, and the **deep emerald** palette is kept. Components, mesh backgrounds, app-icon background, favicon, type and materials are all new. (Was: full rebrand.) |
+| D2 | Name | **PakPlug stays.** Mark = refined signature P; wordmark = tucked lockup (P + lowercase "akplug"); new layered app icon + favicon set. |
 | D3 | Mood | **Light base + coloured mesh.** Off-white base with soft mesh glows behind content. The map stays light. |
 | D4 | Glass delivery | **Native chrome, custom content.** Tab bar, nav bar, search, sheets, toolbars, alerts and segmented controls are real iOS components on iPhone (embedded via platform views). Cards and content are custom. Android gets a matching non-glass version. |
 | D5 | Logic | **Unchanged.** Same screens, steps, data, states and navigation. Only presentation changes. |
@@ -76,7 +76,7 @@ Plain **Surface** (opaque) is used where nothing sits behind it, such as inside 
 ### 3.2 Colour
 
 - **Neutrals:** taken from the iOS 27 kit's system colours (labels, fills, grouped backgrounds), so native chrome and custom content match.
-- **Brand:** one primary "energy" hue plus two supporting mesh hues. Three directions are explored as mesh + glass swatches (step 2). Green is not required.
+- **Brand:** **Deep Emerald (heritage)** is the default `v4 · Brand` mode: primary `#0C7A4A`, pressed `#09653D`, energy `#3DD68C`, mesh mint `#9FE6C4` / aqua `#A9DCEB` / warm sand `#F1E3B8`, canvas `#F7F6F1`, tint `#E5F3EB`. Jade Monsoon, Sunset Ember and Volt Indigo stay as alternate modes for comparison.
 - **Status:** Available → system green · In use → system orange · Booked → system blue · Offline → system grey · Error → system red. Users already know these meanings, and dark-mode pairs exist for later.
 - **Contrast rule:** text never sits directly on the mesh. It always sits on Frost, Glass or Surface, keeping body text at ≥ 4.5:1 and large text at ≥ 3:1.
 - Every component fill and stroke is **bound to a variable**, so the brand palette can be swapped in one place.
