@@ -11,8 +11,8 @@ Figma file: [PakPlug Design System](https://www.figma.com/design/x2fPubLkytfeO9b
 
 | # | Decision | Where to look | Provisional pick |
 |---|----------|---------------|------------------|
-| H1 | **Palette direction:** A Volt Indigo / B Jade Monsoon / C Sunset Ember | [Palette directions](https://www.figma.com/design/x2fPubLkytfeO9btWSoTu6/PakPlug-Design-System?node-id=955-2) | **A** |
-| H2 | **Logo mark:** A Plug-Bolt / B P-Plug / C Rounded Bolt | [Mark presentation](https://www.figma.com/design/x2fPubLkytfeO9btWSoTu6/PakPlug-Design-System?node-id=957-2) | **B** |
+| H1 | Palette direction | [Palette directions](https://www.figma.com/design/x2fPubLkytfeO9btWSoTu6/PakPlug-Design-System?node-id=955-2) | **Decided: Deep Emerald (heritage)** — now the default mode everywhere |
+| H2 | Logo mark | [Signature P · refined](https://www.figma.com/design/x2fPubLkytfeO9btWSoTu6/PakPlug-Design-System?node-id=991-65) | **Decided: heritage signature P, refined** + tucked wordmark + app icon + favicons |
 | H3 | **Display face:** Sora / Geist / Bricolage Grotesque | [Typography](https://www.figma.com/design/x2fPubLkytfeO9btWSoTu6/PakPlug-Design-System?node-id=955-111) | **Sora** |
 | H4 | **Add the "iOS and iPadOS 27" library to this file** (Assets → Libraries). The API cannot add it, and native chrome stays as stand-ins until it is added. | — | — |
 | H5 | Approve or redirect the **mood test** | [Style frame](https://www.figma.com/design/x2fPubLkytfeO9btWSoTu6/PakPlug-Design-System?node-id=959-2) | — |
@@ -54,6 +54,14 @@ Every component has Mobbin refs, a UX-notes card (purpose, anatomy, states, moti
 | C4 | Station Card (6: map preview / list / saved × default / loading) | [C4](https://www.figma.com/design/x2fPubLkytfeO9btWSoTu6/PakPlug-Design-System?node-id=981-295) |
 
 C5 and C7 were built before C4 (atoms before molecules).
+
+## Brand update (Hammad awake, 2026-10-03)
+
+- **Emerald everywhere.** Deep Emerald is the default `v4 · Brand` mode, so every component, both mood tests and the mesh shader switched with no rebuild. Volt Indigo is kept as an alt mode.
+- **Signature P refined**, plus a tucked "Pakplug" wordmark (Ink / Emerald / White), layered app icon (Default / Dark / Tinted) and favicons 16–512.
+  - [App icon + favicon](https://www.figma.com/design/x2fPubLkytfeO9btWSoTu6/PakPlug-Design-System?node-id=992-94)
+- The old mark is swapped for the P in the Search Field and in the style frame.
+- **Flag:** the iOS app ships the default Flutter icon today.
 
 ## Fixes to the system made along the way
 

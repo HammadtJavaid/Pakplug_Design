@@ -105,16 +105,14 @@ The map screen has **no mesh**; the map is the background.
 - **Corners:** concentric: inner radius = outer radius − padding. Radius tokens follow the kit (sheets and large cards follow the device corner).
 - **Touch targets** ≥ 44×44pt.
 
-### 3.6 Brand
+### 3.6 Brand (revised 2026-10-03)
 
-- **3 mark directions:**
-  - (a) a monoline plug + bolt glyph
-  - (b) a "P" monogram drawn as a cable
-  - (c) an abstract energy spark
-- **Chosen mark:**
-  - wordmark lockup
-  - **layered app icon** (background + 1–2 foreground layers, matching the Icon Composer layer model iOS 26/27 uses for glass icons)
-  - small in-app glyph for the nav bar (like Nessie's top-left mark)
+- **Mark:** the heritage signature **P** (lightning bolt as the P's stem), rebuilt with true arcs, consistent 17°/23° angles and the original's parallel 3pt gap between bowl terminal and bolt. The plug/cable details are dropped from the compact mark (illegible below 48px); the original stays on the Brand page as reference.
+- **Wordmark:** tucked lockup in the original's proportions. P is 2.2× the x-height, the bolt tip dips below the baseline, and the "a" of lowercase "akplug" tucks under the bowl so it reads as one word. Variants: Ink (default), Emerald, White.
+- **App icon:** layered for Icon Composer (Background = emerald + mesh glow + soft light; Glyph = white P at 62.5%). Appearances: Default, Dark, Tinted.
+  - **Flag:** the shipped iOS icon (`ios/Runner/Assets.xcassets/AppIcon.appiconset`) is still the default Flutter logo.
+- **Favicon set:** 16, 32, 48, 180 (apple-touch), 192, 512.
+- The first three overnight mark directions are archived on the Brand page.
 
 ---
 
