@@ -90,6 +90,29 @@ These are code-side and copy-only; none of them changes behaviour.
    - quick filter chips on the map that mirror the Filter & sort sheet
    - slide-to-start inside the Start-session sheet
 
+
+## Divergent explorations (Hammad's request, 2026-10-03)
+
+[Explorations page](https://www.figma.com/design/x2fPubLkytfeO9btWSoTu6/PakPlug-Design-System?node-id=995-2) holds four concepts. Each has 3 screens, 4 Mobbin references and the same logic; anything new is flagged as a proposal.
+
+| Concept | Screens | Inspired by | What's new (flag) |
+|---|---|---|---|
+| A · Maps-native | Discover with bottom search · Station place sheet · Book in sheet | Apple Maps iOS 26, Apple News (search tab + accessory) | "Ask host" pre-booking (no pre-booking chat in code) |
+| B · Charging Pass | Bookings as Wallet passes · Pass detail · Pass → live | Apple Wallet, Agoda time window | Add to Apple Wallet (needs the official badge + PassKit) · charger code on pass |
+| C · Live Everywhere | Lock Screen Live Activity + Dynamic Island · Aurora live screen · Home widgets | Tinder/FocusFlight Live Activities, Transit widgets | ActivityKit Live Activity (native) · nearest / next-booking widgets (the code already has a charging home widget) |
+| D · Editorial Bold | Editorial home · Time-first booking scrubber · Celebration complete | Apple Games editorial, Rivian, Wonder, Instacart | Home becomes a feed with "Open map" (IA change) · drag-to-select time window |
+
+**Recommendation:** combine them rather than pick one.
+- **A** for discovery: it keeps Home map-first, as the logic requires.
+- **B** for Bookings: the most distinctive and memorable concept.
+- **C** for the live session, on and off the app: iOS-native strength.
+- **D**'s time-first booking readout and celebration complete.
+- Keep D's editorial home as optional content, not a replacement for the map.
+
+### Data honesty
+
+Two invented numbers were removed from C2 ("km per minute", "plugged in at 41%"). Every value shown exists in the logic map, or is marked as a proposal.
+
 ## Next
 
 - C6 grouped rows
