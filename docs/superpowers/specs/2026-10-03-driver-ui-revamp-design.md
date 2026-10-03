@@ -33,6 +33,7 @@ The theme is **light, not black**.
 | D6 | Process | **Approach C.** Logic map → brand → foundations → disposable style frame → components one at a time → flows one at a time. |
 | D7 | Old design | The previous Figma flows and components are **not a design input**. They are used only to remember the logic. |
 | D8 | Base kit | **iOS and iPadOS 27** community library (updated 2026-09-15), not 26. It is the shipping OS and uses the same Liquid Glass language. |
+| D9 | Flow direction (2026-10-03, Hammad) | **A · Maps-native discovery + B · Charging Pass bookings.** Discovery: bottom search, Apple-Maps-style station place sheet, booking inside the sheet. Bookings: Wallet-style passes; the pass detail is the booking detail; the pass turns live while charging. C (Live Activity / widgets) and D (editorial home, time scrubber) are parked; C can return when native iOS work is scheduled. |
 
 ### Out of scope
 
