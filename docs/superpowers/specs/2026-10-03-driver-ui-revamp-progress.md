@@ -113,6 +113,49 @@ The first icon set was 31 hand-drawn SF look-alikes, and they looked like it. Th
   - SF Symbols has no `calendar.fill`, so the selected Bookings tab uses `calendar` ("Icon / calendar (selected)").
 - **Not changed:** 8 small hand-drawn bits remain inside old exploration mock-ups. The A + B flows are rebuilt from components, so they don't carry over.
 
+## Cloud session, 2026-10-04: type, mesh tokens, contrast, C10, C11, Home
+
+**Decisions from Hammad:** type option **A · SF Pro, lighter**; the emerald mesh is **approved**; the P is the App Icon's signature P, with a new **Mesh** version wherever the P sits on a light surface.
+
+- **Type (A).**
+  - `font/display` is now SF Pro and `font/displayStyle` is Light, so Display XL–S are SF Pro Light at −1% tracking.
+  - Titles, Headline and every "Emphasized" style are SF Pro Medium. Body stays Regular. No Bold or Semibold remains in v4 type; the iOS status bar clock keeps Semibold because it imitates system chrome.
+  - Also updated: raw text outside the styles (icon-section labels, search match prefix, Charging Pass times), the UX notes that said "semibold" or "Sora", and the type board (A marked picked; "Now" relabelled "Before").
+  - QA screenshots of C1, C4, C5, C7, C8 and C12: nothing overflows. Lighter weights are narrower.
+  - The Brand page is untouched: the wordmark samples still use Sora (see "Waiting on Hammad" in the handoff).
+- **Mesh tokens.**
+  - 9 new Brand variables (`brand/meshDeep`, `meshGlow`, `meshMid`, `meshBridge`, `meshAccent`, `meshCelebrateGlow`, `meshQuiet1–3`) with values in all 4 modes, and 9 semantic aliases (`mesh/deep` … `mesh/quiet3`, code `PpColor.mesh…`).
+  - Hero, Celebrate and Quiet shaders are bound to them; Quiet's base is `bg/canvas` and Celebrate's glow is `energy`. Emerald renders exactly as approved.
+  - Alt modes (Jade, Ember, Volt) are derived by rotating the approved set's hue in OKLCH to each palette's primary; checked on a temporary grid.
+  - The old `mesh/1–3` stay: brand art (app icon, confetti, widgets) and the palette swatches still use them.
+- **Contrast on the Hero mesh, measured on the render** (rule card on Materials · on Mesh Hero):
+
+  | Placement | Result |
+  |---|---|
+  | Card with grey secondary text: Frost 68% | 3.74:1 ✗ |
+  | Same on Frost Strong 86% / Surface | 4.62:1 ✓ / 5.31:1 ✓ |
+  | Text over the top glow: black / white | 7.2–8.7:1 ✓ / 2.2:1 ✗ |
+  | Text below the glow: white / black (small) | 4.7–5.7:1 ✓ / 3.7–4.1:1 ✗ |
+  | Grey `text/secondary` anywhere on the mesh | 1.7–3.2:1 ✗ |
+
+  - New token `text/onMesh` (white). The Charge style frame now uses it below the glow, and its tab bar uses Frost Strong.
+  - The rule is in the Station Card, List Row and Tab Bar descriptions.
+- **C10 · Text Field.** 5 states (Default, Focused, Filled, Error, Disabled), text, boolean and icon-swap properties, real-copy examples (charger code, Apple private-relay email, battery range, phone) and UX notes. New tokens `stroke/error` and `icon/error`.
+- **C11 · State View.** Empty, Loading and Error, with an icon swap and an action toggle; examples for notifications empty and error and Home's "Finding your area…".
+- **List Row.** The separator now starts where the text starts: 58 with the icon, 16 without.
+- **Flow A · Home (map)** on Driver Flows, built only from component instances, with a logic-check card. Proposals are flagged: price pins, clustering, quick filter chips, controls top right, search in the thumb zone. Google attribution stays visible.
+- **P mark.** `Brand / Mark / PakPlug P` is now a set: **Solid** (unchanged) and **Mesh** (the P filled with the tokenised Hero mesh, transparent background).
+  - Mesh is now used in the Search Field, the style frame, the explorations and the Emerald wordmark.
+  - White P's on emerald (Charging Pass, app icon, favicons), the Ink and White wordmarks and the size ladder stay Solid.
+
+### More flags for Rayan
+
+6. **SF Pro is Apple-only.** It ships as the system font on iOS. Android needs a fallback; SF Pro can't be bundled there (Apple's licence). System Roboto Light is the simplest.
+7. **Text field.** One `PpTextField` wrapping UITextField and the Material 3 filled TextField; tokens `stroke/error`, `icon/error`.
+8. **State view.** iOS 17+ `ContentUnavailableView` maps 1:1. Several error states print the raw error text today; a plain line is proposed (copy only).
+9. **Map padding.** Keep the Google attribution visible above the chips, search field and tab bar (≈ 214pt).
+10. **Mesh P.** The mesh P is a shader fill. In code, a gradient-masked SVG of the P (or a pre-rendered asset per brand mode) is enough.
+
 ## Mesh retune + type options (Hammad's feedback, 2026-10-03)
 
 - **Mesh:** Hammad wanted deep emerald, one continuous flow, a calm lower half, and an accent in either yellow or teal-blue.
@@ -162,7 +205,7 @@ Two invented numbers were removed from C2 ("km per minute", "plugged in at 41%")
 
 ## Next
 
-- C10 inputs (default / focused / filled / error / disabled)
-- C11 empty / loading / error states
-- Then the chosen flows (A · Maps-native discovery + B · Charging Pass bookings), one at a time, each checked against every state in the logic map: Discover → Station → Book → Bookings (passes) → Pass detail
+- ~~C10 inputs~~ and ~~C11 states~~: done 2026-10-04.
+- Home states next to Home · Map: session active (charging pill, controls raised), list view, loading, empty, error, location off.
+- Then the rest of the chosen flows (A · Maps-native discovery + B · Charging Pass bookings), one at a time, each checked against every state in the logic map: Station place sheet → Book → Bookings (passes) → Pass detail
 - Later: Charge → Live session → Complete (C's live surfaces, D's celebration) → Messages → Profile → Onboarding

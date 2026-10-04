@@ -1,6 +1,31 @@
-# Driver UI Revamp — Handoff (2026-10-03, end of local session)
+# Driver UI Revamp — Handoff (updated 2026-10-04, cloud session)
 
 Start here when you pick the work up in a new session, local or cloud.
+
+## Latest (2026-10-04)
+
+**Decided by Hammad:** type **A · SF Pro, lighter**; the **emerald mesh is approved**; the P is the signature P from the App Icon, with a **Mesh** variant (emerald mesh fill, transparent background) wherever the P sits on a light surface.
+
+**Done this session** (details in the progress log, IDs in the ledger):
+1. Type A applied: Display styles are SF Pro Light via `font/display` + `font/displayStyle`; titles and emphasis are Medium; docs and boards updated.
+2. Mesh tokenised: 9 brand + 9 semantic `mesh/*` variables, bound to the Hero, Celebrate and Quiet shaders; alt modes derived.
+3. Contrast on the Hero mesh measured and fixed: new `text/onMesh`; Frost Strong for cards and chrome; rule card on Materials · on Mesh Hero.
+4. C10 Text Field (5 states) and C11 State View (Empty, Loading, Error), each with UX notes and real-copy examples.
+5. List Row separator follows the text (58 with icon, 16 without).
+6. Flow A · Home (map) on Driver Flows, built from components only, with a logic-check card.
+7. `Brand / Mark / PakPlug P` is a set: Solid and Mesh. Mesh is in the Search Field, style frame, explorations and Emerald wordmark.
+
+**Waiting on Hammad**
+1. Wordmark: it still uses Sora letterforms. Keep it as brand art, or redraw it to sit with SF Pro?
+2. Hero text colour: over the mint glow only black text passes (white is 2.2:1). For all-white text on the Hero, the glow has to move or dim, which changes the approved mesh.
+3. Add the "iOS and iPadOS 27" library to the file (H4). The API can't do it.
+
+**Next steps, in order**
+1. Home states beside Home · Map: session active (charging pill, controls raised), list view, loading, empty, error, location off.
+2. A2 Station place sheet → A3 Book in sheet → Bookings (passes) → Pass detail, each checked against `driver-logic-map.md`.
+3. Later: Charge → Live session → Complete → Messages → Profile → Onboarding.
+
+The sections below are the 2026-10-03 handoff, kept for history.
 
 ## Where everything lives
 
@@ -13,7 +38,7 @@ Start here when you pick the work up in a new session, local or cloud.
   | Foundations | `946:5` |
   | Style Frame | `946:6` |
   | Components | `946:7` |
-  | Driver Flows (empty) | `946:8` |
+  | Driver Flows (Flow A · Home) | `946:8` |
   | Explorations | `995:2` |
 
 - **Branch:** `claude/ui-redesign-components-0ab459`
@@ -25,7 +50,7 @@ Start here when you pick the work up in a new session, local or cloud.
   - [`../plans/2026-10-03-driver-ui-revamp.md`](../plans/2026-10-03-driver-ui-revamp.md): the original plan. Its palette table is outdated; emerald won.
   - [`../tools/sf-symbols/`](../tools/sf-symbols/README.md): exports real SF Symbols to Figma. Needs macOS, so it can't run in a Linux cloud session.
 
-## State right now
+## State at the end of 2026-10-03
 
 1. **Foundations are done.**
    - Variables: `v4 · Brand` (4 modes, Emerald is the default), `v4 · Primitives`, `v4 · Semantic`, `v4 · Scale`.
@@ -55,13 +80,13 @@ Start here when you pick the work up in a new session, local or cloud.
 
    Every option uses Light numbers, Medium titles and Regular body text, with no Bold or Semibold.
 
-## Waiting on Hammad
+## Waiting on Hammad (2026-10-03; items 1 and 2 are done)
 
 1. **Font pick:** A, B, C or D.
 2. **Approve the new mesh**, or adjust it directly in Figma. He likes the look of the "Materials / on Mesh Hero" board (`954:3`).
 3. **Add the "iOS and iPadOS 27" library to the file** (H4). The API can't do it.
 
-## Next steps, in order
+## Next steps as of 2026-10-03 (items 1–5 and 8 are done)
 
 1. **Apply the chosen font.**
    - Update the `font/display` and `font/displayStyle` variables in `v4 · Scale`. A UI-font variable exists as `font/ui`.

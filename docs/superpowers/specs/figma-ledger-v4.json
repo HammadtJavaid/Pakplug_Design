@@ -1,7 +1,7 @@
 {
   "runId": "pp-v4-driver-revamp-2026-10-03",
   "fileKey": "x2fPubLkytfeO9btWSoTu6",
-  "phase": "phase3-components done through C9/C12; mesh retuned (deep emerald); type options awaiting pick",
+  "phase": "type A applied, mesh tokenised, contrast rule, C10 + C11 built, List Row fixed, Flow A Home (map) built, P mark Solid/Mesh set",
   "notes": [
     "Existing file has old v3 system: collections Primitives/Color/Spacing/Radius/Typography/Stroke/Opacity/Motion, text styles without prefix, effect styles Elevation/*, Glow/*. DO NOT TOUCH.",
     "Existing pages: Cover 0:1, Foundations 12:2, New Components 422:2, Components 12:4, Icons & Assets 432:2, EV Patterns 434:2, Driver Pages 12:6, New System Updates 464:2, Host Screens 383:1445, Portfolio Assets 809:2, Revamp Oct 2026 918:1638 (as-shipped captures 918:1639 = logic reference; V1-V5 explorations = do not use).",
@@ -20,26 +20,26 @@
       "explorations": "995:2"
     },
     "collections": {
-      "v4 \u00b7 Brand": {
+      "v4 · Brand": {
         "id": "VariableCollectionId:947:2",
         "modes": {
-          "Emerald \u00b7 PakPlug (default)": "947:0",
+          "Emerald · PakPlug (default)": "947:0",
           "Jade Monsoon (alt)": "947:1",
           "Sunset Ember (alt)": "947:2",
           "Volt Indigo (alt)": "989:0"
         }
       },
-      "v4 \u00b7 Primitives": {
+      "v4 · Primitives": {
         "id": "VariableCollectionId:948:2",
         "mode": "948:0"
       },
-      "v4 \u00b7 Semantic": {
+      "v4 · Semantic": {
         "id": "VariableCollectionId:948:39",
         "modes": {
           "Light": "948:1"
         }
       },
-      "v4 \u00b7 Scale": {
+      "v4 · Scale": {
         "id": "VariableCollectionId:948:94",
         "mode": "948:2"
       }
@@ -62,7 +62,7 @@
         "font/display": "VariableID:948:129",
         "font/displayStyle": "VariableID:948:130",
         "font/ui": "VariableID:948:128",
-        "text/secondary(\u2192label2Strong)": "VariableID:948:50",
+        "text/secondary(→label2Strong)": "VariableID:948:50",
         "gray/label2Strong": "VariableID:953:2",
         "bg/glass": "VariableID:953:4",
         "icon/primary": "VariableID:948:61",
@@ -70,7 +70,30 @@
         "icon/brand": "VariableID:948:64",
         "bg/frostStrong": "VariableID:948:44",
         "stroke/hairline": "VariableID:948:88",
-        "tint": "VariableID:948:45"
+        "tint": "VariableID:948:45",
+        "brand/meshDeep": "VariableID:1062:2",
+        "brand/meshGlow": "VariableID:1062:4",
+        "brand/meshMid": "VariableID:1062:6",
+        "brand/meshBridge": "VariableID:1062:8",
+        "brand/meshAccent": "VariableID:1062:10",
+        "brand/meshCelebrateGlow": "VariableID:1062:12",
+        "brand/meshQuiet1": "VariableID:1062:14",
+        "brand/meshQuiet2": "VariableID:1062:16",
+        "brand/meshQuiet3": "VariableID:1062:18",
+        "mesh/deep": "VariableID:1062:3",
+        "mesh/glow": "VariableID:1062:5",
+        "mesh/mid": "VariableID:1062:7",
+        "mesh/bridge": "VariableID:1062:9",
+        "mesh/accent": "VariableID:1062:11",
+        "mesh/celebrateGlow": "VariableID:1062:13",
+        "mesh/quiet1": "VariableID:1062:15",
+        "mesh/quiet2": "VariableID:1062:17",
+        "mesh/quiet3": "VariableID:1062:19",
+        "text/onMesh": "VariableID:1067:505",
+        "stroke/error": "VariableID:1070:505",
+        "icon/error": "VariableID:1070:506",
+        "stroke/focus": "VariableID:948:90",
+        "text/error": "VariableID:948:60"
       }
     },
     "textStyles": {
@@ -108,7 +131,6 @@
       "Background / Mesh Quiet": "951:7417",
       "Background / Mesh Celebrate": "951:7418",
       "Brand / Mark / A": "956:8",
-      "Brand / Mark / B (provisional)": "956:14",
       "Brand / Mark / C": "956:17",
       "Icons section": "958:2",
       "C1 section": "965:2",
@@ -218,10 +240,10 @@
       "C9 section": "1008:398",
       "Sheet Header": "1008:422",
       "Quick Action Tile": "1008:431",
-      "Quick Action Tile \u00b7 usage": "1028:501",
+      "Quick Action Tile · usage": "1028:501",
       "Stats Row": "1008:432",
       "Connector Row": "1008:490",
-      "Connector Row \u00b7 plug examples": "1026:10625",
+      "Connector Row · plug examples": "1026:10625",
       "Floating Action Pill": "1008:491",
       "Sheet / Filter & sort": "1012:432",
       "Sheet / Directions": "1012:569",
@@ -237,7 +259,20 @@
       "Brand / Refined P": "991:69",
       "Brand / Heritage P": "991:72",
       "Brand / Wordmark": "994:132",
-      "Brand / App Icon": "992:94"
+      "Brand / App Icon": "992:94",
+      "Brand / Mark / PakPlug P (set)": "1082:126",
+      "Brand / Mark / PakPlug P · Style=Solid": "991:69",
+      "Brand / Mark / PakPlug P · Style=Mesh": "1082:123",
+      "Brand / Mark / B · P-Plug": "956:14",
+      "C10 section": "1070:507",
+      "Text Field": "1070:590",
+      "UX notes C10": "1071:611",
+      "C10 usage": "1071:507",
+      "C11 section": "1072:570",
+      "State View": "1072:599",
+      "UX notes C11": "1072:634",
+      "C11 usage": "1072:600",
+      "Search Field · brand mark (Mesh P)": "1083:607"
     },
     "shader": {
       "id": "fdfc1a31-0fbe-46e3-ad2a-b6022d283cb8",
@@ -266,14 +301,16 @@
       }
     },
     "sections": {
-      "foundations:Backgrounds\u00b7Mesh": "951:7415",
+      "foundations:Backgrounds·Mesh": "951:7415",
       "foundations:Materials": "954:2",
       "foundations:Palette directions": "955:2",
       "foundations:Typography": "955:111",
       "brand:Mark directions": "956:2",
       "brand:Mark presentation": "957:2",
       "foundations:Materials (on Mesh Hero)": "954:3",
-      "foundations:Type options \u00b7 lighter (pick one)": "1044:2"
+      "foundations:Type options · lighter (pick one)": "1044:2",
+      "foundations:Materials (on Mesh Hero) · contrast rule card": "1067:536",
+      "brand:Signature P · refined (chosen)": "991:65"
     },
     "styleFrame": {
       "section": "959:2",
@@ -282,15 +319,30 @@
       "mapRect": "960:2"
     },
     "componentProps": {
-      "Connector Row \u00b7 Plug (INSTANCE_SWAP)": "Plug#1026:0",
-      "Quick Action Tile \u00b7 Icon (INSTANCE_SWAP)": "Icon#1008:6"
+      "Connector Row · Plug (INSTANCE_SWAP)": "Plug#1026:0",
+      "Quick Action Tile · Icon (INSTANCE_SWAP)": "Icon#1008:6",
+      "Text Field · Label (TEXT)": "Label#1070:0",
+      "Text Field · Placeholder (TEXT)": "Placeholder#1070:6",
+      "Text Field · Value (TEXT)": "Value#1070:12",
+      "Text Field · Helper (TEXT)": "Helper#1070:18",
+      "Text Field · Error message (TEXT)": "Error message#1070:24",
+      "Text Field · Show label (BOOLEAN)": "Show label#1070:30",
+      "Text Field · Show message (BOOLEAN)": "Show message#1070:36",
+      "Text Field · Leading icon (BOOLEAN)": "Leading icon#1070:42",
+      "Text Field · Icon (INSTANCE_SWAP)": "Icon#1070:48",
+      "State View · Show action (BOOLEAN)": "Show action#1072:0",
+      "State View · Icon (INSTANCE_SWAP)": "Icon#1072:4",
+      "Map Pin · Price (TEXT)": "Price#974:0",
+      "Chip · Label (TEXT)": "Label#970:0",
+      "Icon Button · Icon (INSTANCE_SWAP)": "Icon#979:0"
     },
     "typeOptions": {
       "Now": "1044:6",
-      "A \u00b7 SF Pro lighter": "1044:32",
-      "B \u00b7 Manrope": "1044:58",
-      "C \u00b7 Plus Jakarta Sans": "1044:84",
-      "D \u00b7 Instrument Serif + Sans": "1044:110"
+      "A · SF Pro lighter": "1044:32",
+      "B · Manrope": "1044:58",
+      "C · Plus Jakarta Sans": "1044:84",
+      "D · Instrument Serif + Sans": "1044:110",
+      "picked": "A · SF Pro lighter (2026-10-03). Board renamed; Now column relabelled Before."
     },
     "meshValues": {
       "Hero (951:7416)": {
@@ -337,13 +389,42 @@
         "warp": 0.25,
         "drift": 0.15,
         "grain": 0.02
-      }
+      },
+      "tokenised": "Since 2026-10-04 the three shaders are bound to tokens. Hero: base mesh/deep, c1 mesh/glow, c2 mesh/mid, c3 mesh/bridge, c4 mesh/accent. Celebrate: mesh/deep, mesh/celebrateGlow, mesh/mid, mesh/bridge, energy. Quiet: bg/canvas, mesh/quiet1-3, energy (strength 0). Alt modes derived by OKLCH hue rotation from each palette primary. Legacy mesh/1-3 kept for pastel brand art."
     },
     "semanticExtra": {
       "bg/frost": "white @68%",
       "bg/frostStrong": "white @86%",
       "bg/glass": "white @22%",
-      "text/secondary": "#3C3C43 @76%"
+      "text/secondary": "#3C3C43 @76%",
+      "text/onMesh": "white (alias white primitive); only below the Hero glow"
+    },
+    "flows": {
+      "Flow A · Discover (Home) section": "1076:2",
+      "Home · Map": "1076:5",
+      "Home · Logic check card": "1077:145",
+      "Home · Google attribution": "1077:144"
+    },
+    "contrastOnHero": {
+      "measured": "2026-10-04 on the Hero render",
+      "cards, grey secondary text": {
+        "Frost 68%": "3.74 (fail)",
+        "Frost Strong 86%": "4.62",
+        "Surface": "5.31"
+      },
+      "text on mesh": {
+        "top glow: black": "7.2-8.7",
+        "top glow: white": "2.2 (fail)",
+        "mid/lower: white": "4.7-5.7",
+        "mid: black small": "3.7-4.1 (fail)",
+        "grey anywhere": "1.7-3.2 (fail)",
+        "white 86% lower third": "4.69"
+      },
+      "tab bar on Hero": {
+        "Frost": "grey 3.77 (fail)",
+        "Frost Strong": "grey 4.63",
+        "brand label on tint lens": "4.71"
+      }
     }
   },
   "completedSteps": [
@@ -368,10 +449,18 @@
     "C6 rows",
     "C8 hero+gauge",
     "Brand: heritage P + emerald",
-    "Explorations A\u2013D",
+    "Explorations A–D",
     "C12 pass parts",
     "C9 sheets+dialogs",
-    "Icons \u2192 real SF Symbols (63)"
+    "Icons → real SF Symbols (63)",
+    "Type A applied (vars + 14 styles + raw text + docs)",
+    "Mesh tokenised (9 brand + 9 semantic)",
+    "Hero contrast rule + text/onMesh",
+    "C10 Text Field",
+    "C11 State View",
+    "List Row separator follows text",
+    "Flow A Home · Map",
+    "P mark Solid/Mesh set + swaps"
   ],
   "pendingValidations": [],
   "lessons": [
@@ -381,14 +470,20 @@
     "Shader property values accept VARIABLE_ALIAS; modes cascade into shader.",
     "Community iOS 27 library must be added to file by user before importComponentSetByKeyAsync works.",
     "Upload PNG not WebP via upload_assets (WebP fills render blank in screenshots).",
-    "Adding TEXT props to a set after building variants overwrites per-variant text with the default \u2014 use props only when text is shared.",
+    "Adding TEXT props to a set after building variants overwrites per-variant text with the default — use props only when text is shared.",
     "SF Symbols: SwiftUI ImageRenderer -> PDF context gives true vectors (AppKit NSImage.draw rasterises). Knockouts are SMask soft masks -> subtract in Figma.",
     "figma.createVector() has a default 1px stroke and no fill: set fills + strokes=[] before boolean ops, or flatten outlines the stroke.",
     "Swap icon geometry in place (vectorPaths on the existing vector) to keep instance overrides; move old stroke overrides to fills afterwards.",
-    "swapComponent on an instance linked to an INSTANCE_SWAP property changes the property default for ALL variants \u2014 edit defaults via editComponentProperty and show per-use icons on usage instances.",
-    "Bash output over ~30KB is persisted to a file; keep pasted data batches \u226415KB.",
+    "swapComponent on an instance linked to an INSTANCE_SWAP property changes the property default for ALL variants — edit defaults via editComponentProperty and show per-use icons on usage instances.",
+    "Bash output over ~30KB is persisted to a file; keep pasted data batches ≤15KB.",
     "Component descriptions: write via descriptionMarkdown. Setting `description` HTML-escapes quotes/&/'/<> and read-modify-write compounds it (&amp;amp;quot;).",
-    "Setting an INSTANCE_SWAP property drops master-level colour overrides on the nested icon; instance-level colour survives swaps when inner layer names match (all icon vectors are named 'Symbol')."
+    "Setting an INSTANCE_SWAP property drops master-level colour overrides on the nested icon; instance-level colour survives swaps when inner layer names match (all icon vectors are named 'Symbol').",
+    "Text styles have no descriptionMarkdown (setting it throws \"object is not extensible\"); use description with plain text.",
+    "A failed use_figma script rolls back completely; re-read and retry.",
+    "Variables bound to fontFamily/fontStyle on text nodes follow variable value changes, so audits before a variable change show the old font.",
+    "resize() on a 96pt brand-mark instance crops it at 30pt; use rescale() for marks and icons.",
+    "Shader paints can fill vectors directly; positions are % of each vector bounds.",
+    "www.figma.com asset URLs are blocked by the cloud proxy; take node.screenshot() inside use_figma and read the saved PNG instead."
   ],
-  "next": "Hammad picks a font (A-D on 1044:2) -> apply; approve mesh -> tokenise mesh colours; then C10 inputs, C11 states, flows A+B on 946:8"
+  "next": "Home states (session active, list, loading, empty/error, location off), then A2 Station place sheet, A3 Book in sheet, Bookings passes, Pass detail. Hammad to confirm: wordmark still Sora; all-white text on Hero would need the glow moved."
 }
