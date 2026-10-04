@@ -113,6 +113,51 @@ The first icon set was 31 hand-drawn SF look-alikes, and they looked like it. Th
   - SF Symbols has no `calendar.fill`, so the selected Bookings tab uses `calendar` ("Icon / calendar (selected)").
 - **Not changed:** 8 small hand-drawn bits remain inside old exploration mock-ups. The A + B flows are rebuilt from components, so they don't carry over.
 
+## Overnight run, 2026-10-04: the whole driver journey
+
+Hammad's brief: every driver flow from onboarding to finishing a session, plus bookings, profile and vehicles. Each step references Mobbin and follows one design language. The app can't read the car's battery, so the driver enters it and plans by time or target, with an estimate of kWh, cost and end %. Decisions: wordmark moves to SF Pro; keep the measured contrast rule on the Hero mesh.
+
+**Research.** Nine flow specs plus `00-system.md` (one design language). Each has real copy from the logic map, every state, micro-interactions with timing and haptics, and about 600 Mobbin references in total. All are in `specs/flows/`.
+
+**Components.** Nav Bar, Toast, Rating Stars and Connector Tile (C13–C14), then C15–C27:
+- C15 Charge planner kit
+- C16 Success Mark and Confetti
+- C17 Inline Notice
+- C18 Core extensions
+- C19 Vehicle Card
+- C20 Sheet / Action
+- C21 Avatar
+- C22 Connector Tile and Rating Stars extensions
+- C23 Page Control and Step Progress
+- C24 OS mocks: keyboard, permission alerts, Live Activity and Dynamic Island
+- C25 Inbox Row
+- C26 Message Bubble
+- C27 Nav Bar extensions
+
+Some flows also have their own small kits. Every set, variant and property ID is in `specs/flows/NEW-COMPONENTS.md`.
+
+**Screens.** One Figma page per flow. Every section has the same parts: Refs · Mobbin, frames, Micro-interactions and Logic check with FLAG — PROPOSALS.
+
+| Flow (page) | Sections built (section id) | Status |
+|---|---|---|
+| 1 · Onboarding (1089:8866) | 1A 1158:2 · 1B 1169:2575 · 1C 1182:4522 · 1D 1184:12519 | Built, not reviewed |
+| 2 · Discover (946:8) | 2A 1076:2 · 2B 1161:1521 · 2C 1176:2613 | Built, reviewed |
+| 3 · Search (1089:8867) | 3A 1186:23663 · 3B 1201:27993 | Built |
+| 4 · Station + Booking (1089:8868) | 4A 1213:1595 · 4C 1232:1775 · 4E 1241:7573 | Built; 4B (details and reviews) and 4D (vehicle step) deferred |
+| 5 · Charge + Planner (1089:8869) | 5A 1151:4132 · 5B 1165:3511 · 5C 1178:1990 | Built, reviewed |
+| 6 · Live + Complete (1089:8870) | 6A 1194:26020 · 6B 1203:4583 · 6D 1216:1595 · 6E 1237:2506 | Built; 6C (Lock Screen and Dynamic Island proposals) deferred |
+| 7 · Bookings (1089:8871) | 7A 1249:2 · 7B 1259:1513 · 7C 1270:2555 · 7D 1284:4955 | Built |
+| 8 · Profile + Vehicles (1089:8872) | 8A 1200:5003 · 8B 1205:29868 · 8C 1222:4347 · 8D 1229:3574 | Built; 8E (settings) and 8F (sign out) deferred |
+| 9 · Messages (1089:8873) | none | Deferred (not in tonight's brief) |
+
+The full frame-by-frame log is in `specs/flows/BUILD-LOG.md`.
+
+**Why some items are deferred.** The first build run hit the account's weekly usage limit. After the reset, only the flows Hammad named were rebuilt. Still to build: 4B, 4D, 6C, 8E, 8F, Flow 9, and reviewer passes on Flows 1, 3, 4, 6, 7 and 8. The specs for all of them are ready.
+
+**Limits found in this cloud session.**
+- **Mobbin references are text cards with hyperlinks.** The proxy blocks Mobbin image downloads and Figma uploads, so thumbnails need a local session.
+- **Some SF Symbols are missing.** These can't be exported on Linux: eye, envelope, apple.logo, wifi.slash, ev.plug.ac.type.1, ev.plug.dc.chademo. They're flagged where used.
+
 ## Cloud session, 2026-10-04: type, mesh tokens, contrast, C10, C11, Home
 
 **Decisions from Hammad:** type option **A · SF Pro, lighter**; the emerald mesh is **approved**; the P is the App Icon's signature P, with a new **Mesh** version wherever the P sits on a light surface.

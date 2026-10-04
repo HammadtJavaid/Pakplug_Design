@@ -2,6 +2,26 @@
 
 Start here when you pick the work up in a new session, local or cloud.
 
+## Latest (overnight, 2026-10-04): the driver journey is in Figma
+
+- **Where things are:** one page per flow, `v4 · 📱 Flow 1 · Onboarding` … `Flow 9 · Messages`. Specs are in `specs/flows/`. The progress log has a section-by-section table ("Overnight run").
+- **Built:**
+  - Onboarding
+  - Discover (map, list, cards, saved, price trends)
+  - Search
+  - Station sheet and booking
+  - Charge tab, battery entry and charge planner
+  - Live charging, stop and accessory
+  - Complete, receipt and rating
+  - Bookings in every state, with pass detail, cancel and Wallet
+  - Profile, vehicles (list and add/edit), edit profile and notifications
+- **Next, in order:**
+  1. Reviewer passes on Flows 1, 3, 4, 6, 7 and 8 (2 and 5 are done).
+  2. Deferred sections: 4B, 4D, 6C, 8E, 8F, then Messages (9A–9D).
+  3. Mobbin thumbnails into the ref cards from a local session.
+  4. Export the missing SF Symbols.
+- **Decisions this run:** wordmark moved to SF Pro (Semibold, −2.5%); the Hero-mesh contrast rule stays as measured.
+
 ## Latest (2026-10-04)
 
 **Decided by Hammad:** type **A · SF Pro, lighter**; the **emerald mesh is approved**; the P is the signature P from the App Icon, with a **Mesh** variant (emerald mesh fill, transparent background) wherever the P sits on a light surface.
