@@ -54,3 +54,26 @@ Moved to make room: 4C → y 7182, 4E → y 14606, 6D → y 11280, 6E → y 1601
   - There's no API to start a thread before booking.
   - Block and report need moderation APIs.
 - **Icons:** Connector Row and Connector Tile only swap between Type 2, CCS2 and GB/T. The US screens need J1772 (`ev.plug.ac.type.1`), CCS1 (`ev.plug.dc.ccs1`) and NACS (`ev.plug.dc.nacs`). The exporter needs macOS.
+
+## 2026-10-05 · Host side (US first)
+
+New page **v4 · 📱 Flow 11 · Host · US** (`1346:2`), section `1346:3`. It has 10 screens, all built from v4 components:
+
+| # | Screen | Node |
+|---|---|---|
+| 11.01 | Today · Dashboard (earnings, Accepting bookings, next booking) | `1346:6` |
+| 11.02 | Today · Someone is charging | `1346:443` |
+| 11.03 | Lock Screen · New booking push | `1346:789` |
+| 11.04 | Bookings · Upcoming | `1346:855` |
+| 11.05 | Booking · Detail with payout | `1346:1383` |
+| 11.06 | My charger | `1346:1798` |
+| 11.07 | Price & hours · Edit, with area average | `1346:2059` |
+| 11.08 | Earnings · Month + payouts | `1346:2338` |
+| 11.09 | List your charger · Charger type (J1772 / NACS / CCS1) | `1346:2728` |
+| 11.10 | List your charger · You're live (Celebrate mesh) | `1346:2917` |
+
+- **Model:** bookings confirm automatically inside the host's hours, so there is no accept or decline step. Every amount shows what the host earns after the fee.
+- **Host and data:** Jake Morrison, Boilermaker · State St, J1772 at $0.32/kWh.
+- **Placeholders:** the 15% fee and Friday payouts.
+- **Tab bar:** reuses the driver tab bar with the labels changed to Today and Earnings. A proper host variant is a follow-up.
+- **Later:** a Pakistan host version in Rs, where drivers settle with the host instead of payouts. Stripe Connect onboarding for US payouts isn't designed yet.
