@@ -153,3 +153,6 @@ See the progress log, section "Flags for Rayan". Key items:
 ## Resume prompt for a new session
 
 > Continue the PakPlug driver UI revamp. Read `docs/superpowers/specs/2026-10-03-driver-ui-revamp-handoff.md` first, then the progress log and `figma-ledger-v4.json`. Figma file `x2fPubLkytfeO9btWSoTu6`. Load the figma-use and figma-generate-library skills before any `use_figma` call. Hammad works on design and product only; route code changes to Rayan.
+
+## Latest (2026-10-05, merge to standard)
+Flows 1–10 are merged and documented. Flow 11 · Host · US (page 1346:2) belongs to the second session. Start from the progress log section "Merge to standard, 2026-10-05": its six decisions for Hammad come first, then the small open items.

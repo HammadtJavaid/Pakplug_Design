@@ -254,3 +254,37 @@ Two invented numbers were removed from C2 ("km per minute", "plugged in at 41%")
 - Home states next to Home · Map: session active (charging pill, controls raised), list view, loading, empty, error, location off.
 - Then the rest of the chosen flows (A · Maps-native discovery + B · Charging Pass bookings), one at a time, each checked against every state in the logic map: Station place sheet → Book → Bookings (passes) → Pass detail
 - Later: Charge → Live session → Complete (C's live surfaces, D's celebration) → Messages → Profile → Onboarding
+
+## Merge to standard, 2026-10-05
+
+When this session's container died (4 Oct 19:28 UTC), Hammad ran the same request in a second session. That session built 4B, 4D, 6C, 8E, 8F, 9A–9D and Flow 10 (US), and later Flow 11 · Host · US (PR #2). This session's restarted build had made fuller copies of 4B, 8E, 8F and 10A. Hammad chose **merge to standard**:
+
+- **Kept:** the second session's sections and screen numbers.
+- **Folded in:** the extra states from this session's copies:
+  - 4B: 04.17b, 04.17c, 04.20, 04.21
+  - 8E: 08.09b, 08.14b, 08.62, 08.63
+  - 8F: 08.22c
+  - 10A: 10.21–10.28
+- **Docs added:** Refs · Mobbin and Micro-interactions cards on every section that lacked them (4B, 4D, 6C, 8E, 8F, 9A–9D, 10A–10C), plus Logic checks for 10B and 10C.
+- **US data:** fixed and recorded in `flows/10-us-canon.md` (Lahore leftovers, percentages, dates, plugs).
+- **Reviews:** screen-by-screen on Flows 1, 3, 4, 6, 7 and 8. Flows 9 and 10 got targeted fixes only, because their full reviews were dropped to save tokens.
+- **Components:** Inter text fixed at the master in List Group Header / Trailing, Text Field (suffix → Body, counters → Caption 1), Alert message lead, and the banner app name. The iOS / Lock Screen status-bar time is hidden.
+- **Clean-up:** the Alternates page is deleted.
+
+Full plan and per-step notes: `flows/merge-2026-10-05/`. The open items list collects everything still undecided.
+
+### Decisions for Hammad
+1. **Sign out and Delete account confirms:** sheet (logic map, as built) or native alert (spec)? This is P11 in the 8E and 8F Logic checks.
+2. **Apostrophes:** Flow 1 uses straight ones; Flows 3, 5 and 7 use curly. Pick one for the whole file.
+3. **Date:** 4 Oct 2026 is a Sunday, but every flow says Saturday. Flow 11 uses Sun, 5 Oct.
+4. **Rs ⇄ $ toggle:** the second session put it on the place sheet. The first session's spec put it on the Estimate, Price Trends and Complete cards.
+5. **NACS gap:** no US station has NACS, so the Tesla Model 3 fits nothing.
+6. **Switch colour:** the "on" state is system green, not emerald.
+
+### Open, small
+- **Sheet masters** (Filter & sort 1012:432, Directions 1012:569, Confirm, Choose vehicle) still use a bg/canvas fill and 34 pt bottom padding. They were fixed on instances only.
+- **Status bar under scrim:** still in 08.06–08.08, 08.32 and 02.12.
+- **US screens:** "Chevrolet Bolt EUV" truncates in 10.07, 10.08, 10.13 and 10.14, and the 10.12 clock reads 9:41.
+- **Messages:** 09.05 shows badge "2" on an empty inbox, 09.19 uses an info glyph instead of a phone, and Bilal's number differs from 04.17 and 07.30.
+- **Not drawn, listed per section:** spec states the base lacks. These are the Gaps blocks in each Logic check.
+- **Mobbin:** search is out of AI credits. The new refs come from the spec lists.
